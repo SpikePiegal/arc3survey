@@ -12,18 +12,49 @@ $("#surveyContainer").Survey({
     onComplete: sendDataToServer
 });
 
+
 survey.onComplete.add(function (sender, options) {
 
-     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/js/connect.php");
+    fetch('http://localhost/js/connect.php', {
+
+        method: 'post',
+        body: JSON.stringify(sender.data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(function (response) {
+        return response.text();
+    }).then(function (text) {
+        console.log(text);
+    }).catch(function (error) {
+        console.error(error);
+
+    })
+
+ /*   var options = {
+  url: "http://localhost/js/connect.php",
+  dataType: "text",
+  type: "POST",
+  data: { test: JSON.stringify(sender.data ) }, // Our valid JSON string
+  success: function( data, status, xhr ) {
+     //...
+  },
+  error: function( xhr, status, error ) {
+      //...
+  }
+};
+$.ajax( options ); */
+
+/*     var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost/js/connect.php",true);
 
      xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-     xhr.send(JSON.stringify(sender.data));
+     xhr.send(JSON.stringify(sender.data)); */
 
-   //  var dataString = JSON.stringify(survey.data);
+/*   var dataString = JSON.stringify(survey.data);
 
- /*   $.ajax({
+    $.ajax({
             type: "POST",
             dataType: "json",
             url: "http://localhost/js/connect.php",
