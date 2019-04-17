@@ -20,5 +20,5 @@ survey.onComplete.add(function (sender, options) {
 
       xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-      xhr.send(JSON.stringify(survey));
+      xhr.send(JSON.stringify(sender.data));
 });
