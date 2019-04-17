@@ -7,7 +7,7 @@
 $results = file_get_contents('php://input');
 
 //Decode the JSON string and convert it into a PHP associative array.
-$data = json_decode($_POST['sender'], true);
+$data = json_decode($_POST['sender.data'], true);
 
      //Fetch the details of Student
 
