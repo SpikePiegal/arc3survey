@@ -14,11 +14,21 @@ $("#surveyContainer").Survey({
 
 survey.onComplete.add(function (sender, options) {
 
-      var xhr = new XMLHttpRequest();
+     var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost/js/connect.php");
 
-      xhr.open("POST", "/js/connect.php");
+     xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-      xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+     xhr.send(JSON.stringify(sender.data));
 
-      xhr.send(JSON.stringify(sender.data));
+     var dataString = JSON.stringify(survey.data);
+
+ /*   $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "http://localhost/js/connect.php",
+            data: {myData:dataString},
+         contentType: "application/json; charset=utf-8",
+
+    }); */
 });
