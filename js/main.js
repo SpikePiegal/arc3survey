@@ -21,7 +21,7 @@ survey.onComplete.add(function (sender, options) {
 
      xhr.send(JSON.stringify(sender.data));
 
-     var dataString = JSON.stringify(survey.data);
+   //  var dataString = JSON.stringify(survey.data);
 
  /*   $.ajax({
             type: "POST",
