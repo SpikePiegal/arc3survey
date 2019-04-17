@@ -16,7 +16,7 @@ survey.onComplete.add(function (sender, options) {
 
       var xhr = new XMLHttpRequest();
 
-      xhr.open("POST", "connect.php");
+      xhr.open("POST", "/js/connect.php");
 
       xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
