@@ -26,7 +26,7 @@ if (!$link) {
 }
 echo 'Connected successfully';
 mysql_close($link);
-
+ // update
 
 /* $json = file_get_contents("php://input");
 
