@@ -4,7 +4,24 @@ $json = json_decode(file_get_contents("php://input"));
 $categories = $json->categories;
 
 header("Content-Type: application/json; charset=UTF-8")
-$obj = json_decode($_GET["dataString"], false);
+
+
+
+$jsonFile="CityInfo.json";
+$jsondata = file_get_contents($jsonFile);
+$data = json_decode($jsondata, true);
+
+$array_data = $data['CityInfo'];
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "yourDB";
+
+// Create connection
+$conn = new mysqli($localhost, $username, $password, $yourDB);
+
+
 /* $json = file_get_contents("php://input");
 
 
