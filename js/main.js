@@ -15,7 +15,7 @@ $("#surveyContainer").Survey({
 
 survey.onComplete.add(function (sender, options) {
 
-    fetch('http://localhost/js/connect.php', {
+  /*  fetch('http://localhost/js/connect.php', {
 
         method: 'post',
         body: JSON.stringify(sender.data),
@@ -29,7 +29,7 @@ survey.onComplete.add(function (sender, options) {
     }).catch(function (error) {
         console.error(error);
 
-    })
+    }) */
 
  /*   var options = {
   url: "http://localhost/js/connect.php",
@@ -44,22 +44,30 @@ survey.onComplete.add(function (sender, options) {
   }
 };
 $.ajax( options ); */
-
-/*     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/js/connect.php",true);
+    var dataString = JSON.stringify(survey.data);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "js/connect.php",true);
 
      xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-     xhr.send(JSON.stringify(sender.data)); */
+     xhr.send(dataString); 
 
-/*   var dataString = JSON.stringify(survey.data);
+   var dataString = JSON.stringify(survey.data);
+   jQuery.support.cors = true;
 
     $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "http://localhost/js/connect.php",
-            data: {myData:dataString},
+            type: "GET",
+           dataType: "json",
+            url: "js/connect.php",
+            data: {dataString},
          contentType: "application/json; charset=utf-8",
+         success: function( data, textStatus, jQxhr ){
+            $('#response pre').html( data );
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    }); 
 
-    }); */
+
 });
