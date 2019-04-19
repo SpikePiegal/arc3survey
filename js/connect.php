@@ -20,6 +20,12 @@ $dbname = "yourDB";
 
 // Create connection
 $conn = new mysqli($localhost, $username, $password, $yourDB);
+$link = mysql_connect('localhost', 'username', 'password');
+if (!$link) {
+    die('Could not connect: ' . mysql_error());
+}
+echo 'Connected successfully';
+mysql_close($link);
 
 
 /* $json = file_get_contents("php://input");
