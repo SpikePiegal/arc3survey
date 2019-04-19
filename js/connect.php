@@ -8,7 +8,7 @@ $obj = json_decode($_GET["dataString"], false);
 /* $json = file_get_contents("php://input");
 
 
-
+//test test
 $data = json_decode($json, true);
 
 var_dump($data); */
