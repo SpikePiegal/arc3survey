@@ -4,6 +4,8 @@ $json = (file_get_contents("php://input"));
 
  $obj = json_decode($json,true);
 
+ 
+
 header("Content-Type: application/json; charset=UTF-8")
 
 
@@ -19,34 +21,34 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$Age = $obj [0][1]; 
-$Race_Ethnicity
-$International_Student
-$Sexual_Orientation
-$Year_Of_School
-$Participations
-$Living_Situation
-$Question1_SH
-$Question2_SH
-$Question3_SH
-$Question4_SH
-$Question5_SH
-$Question6_SH
-$Question7_SH
-$Question8_SH
-$Question9_SH
-$Question10_SH
-$Question11_SH
-$Question12_SH
-$Question13_SH
-$Question14_SH
-$Question15_SH
-$Question16_SH
-$F_Up_Question1_SH
-$F_Up_Question2_SH
-$F_Up_Question3_SH
-$F_Up_Question4_SH
-$F_Up_Question5_SH
+$Age = .$obj->q1.; 
+$Race_Ethnicity = .$obj->q2.;
+$International_Student = .$obj->q3.;
+$Sexual_Orientation = .$obj->q4.;
+$Year_Of_School = .$obj->q5.;
+$Participations  = .$obj->q6.;
+$Living_Situation  = .$obj->q7.;
+$Question1_SH = .$obj->q7.;
+$Question2_SH = .$obj->q7.;
+$Question3_SH = .$obj->q7.;
+$Question4_SH = .$obj->q7.;
+$Question5_SH = .$obj->q7.;
+$Question6_SH = .$obj->q7.;
+$Question7_SH = .$obj->q7.;
+$Question8_SH = .$obj->q7.;
+$Question9_SH = .$obj->q7.;
+$Question10_SH = .$obj->q7.;
+$Question11_SH = .$obj->q7.;
+$Question12_SH = .$obj->q7.;
+$Question13_SH = .$obj->q7.;
+$Question14_SH = .$obj->q7.;
+$Question15_SH = .$obj->q7.;
+$Question16_SH = .$obj->q7.;
+$F_Up_Question1_SH = .$obj->q7.;
+$F_Up_Question2_SH = .$obj->q7.;
+$F_Up_Question3_SH = .$obj->q7.;
+$F_Up_Question4_SH = .$obj->q7.;
+$F_Up_Question5_SH = .$obj->q7.;
 
 
 
