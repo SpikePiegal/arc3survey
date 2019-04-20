@@ -44,11 +44,11 @@ $Question13_SH = .$obj->q7.;
 $Question14_SH = .$obj->q7.;
 $Question15_SH = .$obj->q7.;
 $Question16_SH = .$obj->q7.;
-$F_Up_Question1_SH = .$obj->q7.;
-$F_Up_Question2_SH = .$obj->q7.;
-$F_Up_Question3_SH = .$obj->q7.;
-$F_Up_Question4_SH = .$obj->q7.;
-$F_Up_Question5_SH = .$obj->q7.;
+$F_Up_Question1_SH = .$obj->q9.;
+$F_Up_Question2_SH = .$obj->q10.;
+$F_Up_Question3_SH = .$obj->q11.;
+$F_Up_Question4_SH = .$obj->q12.;
+$F_Up_Question5_SH = .$obj->q13.;
 
 
 
