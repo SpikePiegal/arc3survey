@@ -1,8 +1,35 @@
 <?php
 
-$json = json_decode(file_get_contents("php://input"));
-$categories = $json->categories;
+$json = (file_get_contents("php://input"));
 
+ $obj = json_decode($json,true);
+ print_r($json);
+ print_r($obj);
+
+ function consoleLogs($data) {
+    $html = "";
+    $coll;
+    if (is_array($data) || is_object($data)) {
+        $coll = json_encode($data);
+    } else {
+        $coll = $data;
+    }
+    $html = "<script>console.log('PHP: ".$coll."');</script>";
+    echo($html);
+}
+
+consoleLogs(array("test1", "test2"));
+
+debug_to_console( "Test" ); 
+
+debug_to_console($obj);
+ print_r("hello");
+ echo "<script>console.log('" . json_encode($json) . "');</script>";
+ echo "<script>console.log('" . $obj . "');</script>";
+ echo "<script>console.log('" . '$obj' . "');</script>";
+ var_dump('Hello');
+ var_dump($obj);
+ var_dump($json);
 header("Content-Type: application/json; charset=UTF-8")
 
 
@@ -18,7 +45,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-
+/*
 $sql = INSERT INTO `arc`.`results`
 (`Result_ID`,
 `Age`,
@@ -90,6 +117,6 @@ VALUES
 <{Survey_ID: }>,
 <{Time_SH_2nQuestions: }>);
 
-
+*/
 
  ?>
