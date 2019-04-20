@@ -44,13 +44,13 @@ survey.onComplete.add(function (sender, options) {
   }
 };
 $.ajax( options ); */
-    var dataString = JSON.stringify(survey.data);
+  /*  var dataString = JSON.stringify(survey.data);
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "connect.php",true);
 
      xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-     xhr.send(dataString); 
+     xhr.send(dataString);  */
 
    var dataString = JSON.stringify(survey.data);
    jQuery.support.cors = true;
