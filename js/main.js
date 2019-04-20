@@ -15,6 +15,23 @@ $("#surveyContainer").Survey({
 
 survey.onComplete.add(function (sender, options) {
 
+    var dataString = JSON.stringify(survey.data);
+    jQuery.support.cors = true;
+ 
+     $.ajax({
+             type: "GET",
+            dataType: "json",
+             url: "connect.php",
+             data: {dataString},
+          contentType: "application/json; charset=utf-8",
+          success: function( data, textStatus, jQxhr ){
+             $('#response pre').html( data );
+         },
+         error: function( jqXhr, textStatus, errorThrown ){
+         //    console.log( errorThrown );
+         }
+     }); 
+
   /*  fetch('http://localhost/js/connect.php', {
 
         method: 'post',
@@ -52,22 +69,7 @@ $.ajax( options ); */
 
      xhr.send(dataString);  */
 
-   var dataString = JSON.stringify(survey.data);
-   jQuery.support.cors = true;
-
-    $.ajax({
-            type: "GET",
-           dataType: "json",
-            url: "connect.php",
-            data: {dataString},
-         contentType: "application/json; charset=utf-8",
-         success: function( data, textStatus, jQxhr ){
-            $('#response pre').html( data );
-        },
-        error: function( jqXhr, textStatus, errorThrown ){
-        //    console.log( errorThrown );
-        }
-    }); 
+ 
 
 
 });
