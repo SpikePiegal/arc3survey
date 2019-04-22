@@ -1,15 +1,16 @@
 <?php
+echo '<script>console.log("Your stuff here")</script>';
 
 $json = (file_get_contents("php://input"));
 
  $obj = json_decode($json,true);
-
+ echo '$test';
  
 
 header("Content-Type: application/json; charset=UTF-8")
 
 
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "password";
 $dbname = "arc";
