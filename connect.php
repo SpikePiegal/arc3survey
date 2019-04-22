@@ -15,22 +15,16 @@ $username = "root";
 $password = "password";
 $dbname = "arc";
 
-/* Create connection
+ Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-*/
+
 
 //
-$connection = mysql_connect($servername, $username, $password,$dbname);
-mysql_query("set names 'utf8'");
-if (!$connection) {
-    die("could not connect to the database.\n" . mysql_error());
-}else {
-    mysql_select_db(“$dbname”);
-}
+
 
 
 $Age = .$obj->q1.; 
