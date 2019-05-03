@@ -32,6 +32,8 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
+        // These are prepared statements that save all of the data
+
         $Age = $values['q1'];
         $Race_Ethnicity = arrayToString($values['q2']);
         $International_Student = $values['q3'];
